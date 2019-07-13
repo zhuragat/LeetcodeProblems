@@ -1,4 +1,4 @@
-package FlippingAnImage_832;
+package array.FlippingAnImage_832;
 
 import java.util.Arrays;
 

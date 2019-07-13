@@ -1,4 +1,4 @@
-package SortArrayByParity_905;
+package array.SortArrayByParity_905;
 
 
 /**
