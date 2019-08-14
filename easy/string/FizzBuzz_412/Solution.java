@@ -4,26 +4,35 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 1108. Defanging an IP Address
- * https://leetcode.com/problems/defanging-an-ip-address/
- * <p>
- * Given a valid (IPv4) IP address, return a defanged version of that IP address.
- * <p>
- * A defanged IP address replaces every period "." with "[.]".
- * <p>
- * <p>
- * Example 1:
- * <p>
- * Input: address = "1.1.1.1"
- * Output: "1[.]1[.]1[.]1"
- * Example 2:
- * <p>
- * Input: address = "255.100.50.0"
- * Output: "255[.]100[.]50[.]0"
- * <p>
- * Constraints:
- * <p>
- * The given address is a valid IPv4 address.
+ 412. Fizz Buzz
+ https://leetcode.com/problems/fizz-buzz/
+
+ Write a program that outputs the string representation of numbers from 1 to n.
+
+ But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
+
+ Example:
+
+ n = 15,
+
+ Return:
+ [
+ "1",
+ "2",
+ "Fizz",
+ "4",
+ "Buzz",
+ "Fizz",
+ "7",
+ "8",
+ "Fizz",
+ "Buzz",
+ "11",
+ "Fizz",
+ "13",
+ "14",
+ "FizzBuzz"
+ ]
  */
 class Solution {
     public List<String> fizzBuzz(int n) {
