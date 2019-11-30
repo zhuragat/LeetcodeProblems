@@ -1,4 +1,4 @@
-package easy.hash_table.JewelsAndStones;
+package easy.hash_table.JewelsAndStones_771;
 
 /**
  771. Jewels and Stones

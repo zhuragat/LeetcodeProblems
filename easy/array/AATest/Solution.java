@@ -1,14 +1,12 @@
 package easy.array.AATest;
 
 class Solution {
-    public int removeDuplicates(int[] nums) {
-        int count = 1;
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] != nums[i + 1]) {
-                nums[count] = nums[i + 1];
-                count++;
-            }
+    public int countArrangement(int N) {
+        int sum = N;
+        for (int i = 1; i < N; i++) {
+            int count = N / (i + 1);
+            sum *= count;
         }
-        return count;
+        return sum;
     }
 }
