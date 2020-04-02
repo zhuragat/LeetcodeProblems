@@ -1,8 +1,5 @@
 package challenge_april_2020.week_1.SingleNumber_1;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  Single Number
  https://leetcode.com/explore/other/card/30-day-leetcoding-challenge/528/week-1/3283/
@@ -25,12 +22,12 @@ import java.util.Set;
 class Solution {
     public int singleNumber(int[] nums) {
         if (nums.length == 1) return nums[0];
-        Set<Integer> set = new HashSet<>();
-        for (int num : nums) {
-            if (set.contains(num)) {
-                set.remove(num);
-            } else set.add(num);
+        int result = 0;
+
+        for (int num: nums) {
+            result^=num;
         }
-        return set.iterator().next();
+
+        return result;
     }
 }
