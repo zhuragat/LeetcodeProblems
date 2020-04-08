@@ -30,18 +30,11 @@ package challenge_april_2020.week_2.MiddleOfTheLinkedList_1;
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
-        int size = 1;
-        ListNode current = head;
-
-        while (current.next != null) {
-            current = current.next;
-            size++;
+        ListNode fast = head, slow = head;
+        while (fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
         }
-
-        for (int i = 0; i < size / 2; i++) {
-            head = head.next;
-        }
-
-        return head;
+        return slow;
     }
 }
