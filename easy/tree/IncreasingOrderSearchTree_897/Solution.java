@@ -2,29 +2,20 @@ package easy.tree.IncreasingOrderSearchTree_897;
 
 import easy.tree.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 class Solution {
-    List<Integer> list = new ArrayList<>();
+    TreeNode ans = new TreeNode(0);
+    TreeNode node = ans;
 
     public TreeNode increasingBST(TreeNode root) {
         traverse(root);
-
-        TreeNode head = new TreeNode(0);
-        TreeNode next = head;
-        for (Integer integer : list) {
-            next.right = new TreeNode(integer);
-            next = next.right;
-        }
-
-        return head.right;
+        return ans.right;
     }
 
-    void traverse(TreeNode root){
-        if (root != null){
+    void traverse(TreeNode root) {
+        if (root != null) {
             traverse(root.left);
-            list.add(root.val);
+            node.right = new TreeNode(root.val);
+            node = node.right;
             traverse(root.right);
         }
     }
