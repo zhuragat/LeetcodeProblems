@@ -9,16 +9,14 @@ class Solution {
         int key = 0;
         int ans = 0;
 
-        int[] arr = new int[2 * nums.length - 1];
-        arr[nums.length - 1] = -1;
+        map.put(0, -1);
 
         for (int i = 0; i < nums.length; i++) {
-            key += nums[i] == 1 ? 1 : -1;
+            key = nums[i] == 1 ? key + 1 : key - 1;
 
-            if (arr[key + nums.length - 1] != 0) {
-                ans = Math.max(ans, i - arr[key + nums.length - 1]);
-            } else
-                arr[key + nums.length - 1] = i;
+            if (map.containsKey(key)) {
+                ans = Math.max(ans, i - map.get(key));
+            } else map.put(key, i);
         }
 
         return ans;
